@@ -2,15 +2,17 @@
 version: "3"
 services:
  devopsdb:
-   image: siacharan/mymenu:dbimage
+   image: siacharan/nandu:dbimage
    ports:
      - "3306:3306"
+     deploy:
+        replicas: 4
 
  application:
-   image: siacharan/mymenu:appimage
-   deploy:
-     replicas: 3
+   image: siacharan/nandu:appimage
    ports:
      - "1111:8080"
+   deploy:
+       replicas: 3
    depends_on:
      - "devopsdb"
