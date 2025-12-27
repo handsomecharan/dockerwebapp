@@ -2,8 +2,6 @@
 version: "3"
 services:
  devopsdb:
- deploy:
-    replicas: 2
    image: siacharan/mymenu:dbimage
    ports:
      - "3306:3306"
