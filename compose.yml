@@ -6,7 +6,6 @@ services:
    ports:
      - "3306:3306"
    
-
  application:
    image: siacharan/nandu:appimage
    ports:
