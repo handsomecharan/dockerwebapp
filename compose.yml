@@ -2,8 +2,6 @@
 version: "3"
 services:
  devopsdb:
- deploy:
-    replicas: 3
    image: shaikmustafa/siacharan:dbimage
    ports:
      - "3306:3306"
